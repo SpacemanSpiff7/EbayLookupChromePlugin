@@ -211,8 +211,7 @@ Free tier: 50 requests/month
 ├── content.js             # Main logic (all modules in one file)
 ├── panel.css              # Panel styling
 ├── options.html           # Options page UI
-├── options.js             # Options page logic
-└── api_keys.txt           # Local reference (not used at runtime)
+└── options.js             # Options page logic
 ```
 
 ### Making Changes
