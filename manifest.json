@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "eBay Sold Price Lookup for Craigslist",
+  "version": "1.0.0",
+  "description": "Shows eBay sold-price statistics and recent comps on Craigslist listing pages",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://ebay-average-selling-price.p.rapidapi.com/*",
+    "https://api.openai.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.craigslist.org/*/d/*"],
+      "js": ["content.js"],
+      "css": ["panel.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  }
+}
